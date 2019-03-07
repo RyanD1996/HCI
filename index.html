@@ -24,6 +24,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+
+
 </head>
 <body>
         <div class="nav-bar">
@@ -78,8 +80,11 @@
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
                                     <form>
                                         <input type="text" name="postcode" placeholder="Enter your postcode here." class="user-postcode-input" onfocus="this.placeholder = ''">
-                                        <input type="submit" value="Find my nearest bike!" class="btn gradient-bg mr-2">
+
+                                        <!-- <input type="submit" value="Find my nearest bike!" class="btn gradient-bg mr-2" onclick="location.href = './map/map.html'"/> -->
                                     </form>
+                                    <button class="btn gradient-bg mr-2" onclick="location.href = './map/map.html'"> Find my nearest bike!</button>
+                                    <div id="map"></map>
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -812,7 +817,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div><!-- .footer-bar -->
     </footer><!-- .site-footer -->
 
-    <script type='text/javascript' src='js/jquery.js'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script type='text/javascript' src='js/jquery.js'></script> -->
     <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
     <!-- <script type='text/javascript' src='js/swiper.min.js'></script> -->
     <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
@@ -821,5 +830,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script type='text/javascript' src='js/jquery.barfiller.js'></script>
     <script type='text/javascript' src='js/custom.js'></script>
 
+
+
+
 </body>
 </html>
+   <script>
+   function submitPostcode(){
+
+   }
+   </script>
