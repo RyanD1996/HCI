@@ -60,6 +60,7 @@ if(!isset($_SESSION['firstname'])){
                              <li><a href="login-signup/login.php">Login | Signup</a></li>
                             <?php endif; ?>
                             <?php if(isset($_SESSION["firstname"])): ?>
+                             <li><a href="causes.php">My Account</a></li>
                              <li><a href="index.php">Log Out</a></li>
                             <?php endif; ?>
                         </ul>

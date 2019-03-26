@@ -46,7 +46,7 @@
                                 <li class="current-menu-item"><a href="index.html">Home</a></li>
                                 <li><a href="about.html">About us</a></li>
                                 <li><a href="faq.php">FAQ</a></li>
-                                <li><a href="news.html">News</a></li>
+                               <!-- <li><a href="news.html">News</a></li> -->
                                 <li><a href="./login-signup/login.php">Login | Signup</a></li>
                             </ul>
                         </nav><!-- .site-navigation -->
