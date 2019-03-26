@@ -2148,3 +2148,18 @@ ul.tabs-nav .tab-nav.active {
     background: #131212;
     text-align: center;
 }
+
+/*
+  JS Chart Controller
+*/
+#chartContainer{
+    margin: 0 auto; 
+}
+#chart-controller{
+    height: 370px;
+    width: 100%;
+}
+
+.hidden{
+    display: none!important; 
+}

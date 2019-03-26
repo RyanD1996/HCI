@@ -1,12 +1,8 @@
 <?php
-
-session_start();
-if(!isset($_SESSION['firstname'])){
-  header('location:login.php');
-}
+    session_start();    
+    session_destroy();
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +29,8 @@ if(!isset($_SESSION['firstname'])){
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+
+
 </head>
 <body>
         <div class="nav-bar">
@@ -45,12 +43,11 @@ if(!isset($_SESSION['firstname'])){
 
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                <li class="current-menu-item"><a href="home.php">Home</a></li>
-                                <li><a href="about.html">Plan A Trip</a></li>
+                                <li class="current-menu-item"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About us</a></li>
                                 <li><a href="faq.php">FAQ</a></li>
-                                <li><a href="causes.php">My Account</a></li>
-                                <li><a href="">Welcome <?php echo $_SESSION['firstname']; ?></a></li>
-                                <li><a href="index.php">Logout</a></li>
+                                <li><a href="news.html">News</a></li>
+                                <li><a href="./login-signup/login.php">Login | Signup</a></li>
                             </ul>
                         </nav><!-- .site-navigation -->
 
@@ -69,12 +66,12 @@ if(!isset($_SESSION['firstname'])){
     <div class="swiper-container hero-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide hero-content-wrap">
-                <img class="hero-image" src="images/bike-splash.jpg"  alt="">
+                <img class="hero-image" src="images/bike-splash.jpg" alt="">
 
                 <div class="hero-content-overlay position-absolute w-100 h-100">
                     <div class="container h-100">
                         <div class="row h-100">
-                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                            <div class="col-12 col-lg-8 d-flex flex-column align-items-start">
                                 <header class="entry-header">
                                     <h1>TransitCycle</h1>
                                     <h5>A bike sharing scheme for students</h5>
@@ -86,9 +83,12 @@ if(!isset($_SESSION['firstname'])){
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
                                     <form>
-                                        <input type="text" name="postcode" placeholder="Enter your postcode here." class="user-postcode-input">
-                                        <input type="submit" value="Find my nearest bike!" class="btn gradient-bg mr-2">
+                                        <input type="text" name="postcode" placeholder="Enter your postcode here." class="user-postcode-input" onfocus="this.placeholder = ''">
+
+                                        <!-- <input type="submit" value="Find my nearest bike!" class="btn gradient-bg mr-2" onclick="location.href = './map/map.html'"/> -->
                                     </form>
+                                    <button class="btn gradient-bg mr-2" onclick="location.href = './map/map.html'"> Find my nearest bike!</button>
+                                    <div id="map"></map>
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -821,7 +821,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div><!-- .footer-bar -->
     </footer><!-- .site-footer -->
 
-    <script type='text/javascript' src='js/jquery.js'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script type='text/javascript' src='js/jquery.js'></script> -->
     <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
     <!-- <script type='text/javascript' src='js/swiper.min.js'></script> -->
     <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
@@ -830,5 +834,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script type='text/javascript' src='js/jquery.barfiller.js'></script>
     <script type='text/javascript' src='js/custom.js'></script>
 
+
+
+
 </body>
 </html>
+   <script>
+   function submitPostcode(){
+
+   }
+   </script>
